@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div id="nav-container">
+            <div class="border"></div>
+            <img src="bus.png" class="logo">
+            <div class="lang-cont border">
+                <div class="lang dropdown">Language</div>
+                <button class="car-btn"><i class="fa-solid fa-caret-down"></i></button>
+                <button class="car-dbtn"><i class="fa-solid fa-caret-up"></i></button>
+                <div class="dropdown-content">
+                    <a class="sph splborder">English</a>
+                    <a class="sph splborder">Tamil</a>
+                </div>
+            </div>
+            <div class="sidenav">
+                <a class="bookings border">my bookings</a>
+                <a class="help border">help</a>
+                <a class="sign border">sign in</a>
+                <a class="acc border">create account</a> 
+            </div>
+        </header>
+    </div>
+    <main>
+        <div class="hero-container">
+            <div class="hero-input">
+                <div class="ft-text1">From
+                <input placeholder="Pallavaram" class="srch-inp1  inp" type="text-only">
+                </div>
+                <div class="inp1-results toggledisplay">
+                   <div class="city">Meenambakam</div>
+                   <div class="city">Pallavaram</div>
+                   <div class="city">Velachery</div>
+                   <div class="city">Chrompet</div>
+                   <div class="city">Saidapet</div>
+                   <div class="city">Perungalathur</div>
+                   <div class="city">T-nagar</div>
+                   <div class="city">Kolathur</div>
+                   <div class="city">Perungudi</div>
+                    </div>
+
+
+
+                <div class="ft-text2">To</div>
+                <input placeholder="Vandaloor" class="srch-inp2 inp" type="text-only">
+
+                <button class="lr-icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
+
+                <div class="dp-text">Departure
+                <input placeholder="" class="srch-inp3 inp">
+                <button class="angle-icon"  id="prevMonth"><i class="fa-solid fa-angle-left "></i></button>
+                <button class="angle-icon" id="nextMonth"  ><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+
+                <div class="inp2-results toggledisplay inp ">
+                    <div class="city">Meenambakam</div>
+                    <div class="city">Pallavaram</div>
+                    <div class="city">Velachery</div>
+                    <div class="city">Chrompet</div>
+                    <div class="city">Saidapet</div>
+                    <div class="city">Perungalathur</div>
+                    <div class="city">T-nagar</div>
+                    <div class="city">Kolathur</div>
+                    <div class="city">Perungudi</div>
+                     </div>
+
+
+                <div class="calendar toggledisplay">
+                    <div class="month-year">
+                     
+                        <span id="monthYear"></span>
+                    
+                    </div>
+                    <div class="days" id="daysGrid"></div>
+                </div>
+
+                <div class="pas-text">Passengers
+                <input placeholder="1 Person" class="srch-inp4 inp">
+                <div class="drp-icon"><i class="fa-solid fa-angle-down"></i></div>
+                </div>
+
+                <div class="no-of-pass toggledisplaypass ">
+                    <button  class="decrease ">-</button>
+                    <input  class="srch-inp5 inp" placeholder="1" type="number" readonly min="1"  max="3" >
+                    <button class="increase " >+</button>
+                </div>
+
+
+
+
+
+
+                <button class="srch-btn">Search</button>
+            </div>
+            <div class="hero-search">
+                <div class="custom-radio">
+                    <input type="radio" id="option1" name="options" value="Option 1">
+                    <label for="option1">One Way</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="option2" name="options" value="Option 2">
+                    <label for="option2">Round Trip</label>
+                </div>
+            </div>
+            <div class="manage-user">
+
+                <button class="track-trip">Track Your Trip</button>
+                <button class="subscription">Subscription</button>
+            </div>
+          
+        </div>
+
+
+
+       
+    </main>
+  
+
+    <script src="index.js"></script>
+
+   
+
+
+
+
+</body>
+</html>
+
+          
+
+
+
+
+
+
+
+
+
