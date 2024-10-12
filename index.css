@@ -614,7 +614,7 @@ input:disabled:focus {
 
 .dp-btn,.person-btn{
     position: absolute;
-bottom: 44%;
+bottom: 0%;
     
   
 }
@@ -627,7 +627,7 @@ bottom: 44%;
     
 .input-group div {
     margin: 5px; 
-    flex: 1 1 100px;
+    flex: 1 1 20px;
   
 }
 
