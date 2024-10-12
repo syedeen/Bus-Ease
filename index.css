@@ -631,6 +631,19 @@ bottom: 0%;
   
 }
 
+.fa-angle-left,.fa-angle-right{
+    font-size: 1.8rem;
+}
+
+
+
+.dp-btn{
+    border-radius:15px ;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 20px;
+}
 
 
 
