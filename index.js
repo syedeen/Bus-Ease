@@ -595,3 +595,19 @@ const toggleInputs = (activeInput) => {
          },150); 
      });
  });
+
+
+
+
+//  #log-out button
+
+const username=localStorage.getItem("user");
+const log=  document.getElementById("logout");
+
+
+if(username){
+const parseduser= JSON.parse(username);
+document.querySelector(".welcome-msg").innerHTML=`Hello ${parseduser.username}`;
+}
+
+
