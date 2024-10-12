@@ -555,6 +555,18 @@ nav li:first-child:nth-child(2){
     display: flex;
 }
 
+input:disabled {
+    background-color:white; 
+    color: inherit; 
+    border: 1px solid #ccc; 
+    cursor: not-allowed;
+}
+
+
+input:disabled:focus {
+    outline: none;
+}
+
 
 
 
