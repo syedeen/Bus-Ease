@@ -600,6 +600,14 @@ nav li:first-child:nth-child(2){
 }
 
 
+.dp-btn,.person-btn{
+    position: absolute;
+bottom: 44%;
+    
+  
+}
+
+
 
 }
 
