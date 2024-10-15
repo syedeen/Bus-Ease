@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+    <nav>
+        <ul class="sidenav">
+            <li onclick=hidesidenav()><a  href="#"><i class="fa-solid fa-xmark"></i></a></li>
+            <li><a data-translate="bookings"href="bookings.html">Booking</a></li>
+            <li><a data-translate="sign"href="register.html"> Sign Up</a></li>
+            <li><a data-translate="home"href="#">Home</a></li>
+            <li><a data-translate="login" href="login.html">Log out</a></li>
+            <li><a data-translate="help" href="#">Help</a></ldata-translate="bookings"i>
+       </ul>
+
+     
+
+        <ul>
+             <li ><a>𝐁𝐮𝐬 𝐄𝐚𝐬𝐞</a></li>
+          
+             <li class="lang-cont "><a href="#" > <p  data-translate="lang"> language</p><i class="fa-solid fa-angle-down"></i>
+             <i class="fa-solid fa-angle-up"></i></a> 
+             <ul class="lang-options">
+             <li><a class="english" href="#">English</a></li>
+             <li><a class="tamil" href="#">Tamil</a></li>
+            </ul></li>
+             <li class="hideonmobile"><a data-translate="home" href="#">Home</a></li>
+             <li class="hideonmobile"><a data-translate="bookings" href="bookings.html">Booking</a></li>
+             <li class="hideonmobile"><a data-translate="sign" href="register.html"> Sign Up</a></li>
+             <li class="hideonmobile"><a data-translate="login" href="login.html">Log out</a></li>
+             <li class="hideonmobile"><a data-translate="help" href="#">Help</a></li>
+             <li class="menu-btn" onclick=showsidenav()><a  href="#"><i class="fa-solid fa-bars"></i></a></li>
+         
+        </ul>
+    </nav>
+</header>
+
+
+
+
+<main>
+    <section>
+    <h2 class="welcome-msg"></h2>
+    <div class="hero-container">
+        <div class="way">
+            <label   class="custom-radio">
+                <input type="radio" name="route" value="one-way">
+                <span class="radio-button"></span>
+               <p data-translate="oneway">  One Way</p>
+            </label>
+            <label  class="custom-radio">
+                <input type="radio" name="route" value="round-trip">
+                <span class="radio-button"></span>
+                <p data-translate="roundtrip" > Round Trip</p> 
+            </label>
+        </div>
+
+        <div class="input-group">
+            <div class="inp1">
+                <label class="ft-text1" data-translate="from">From</label>
+                <input type="text" placeholder="PALLAVARAM" class="srch-inp1" required>
+                <p class="inp-result1"></p>
+            </div>
+           <p class="btn-grp">
+               <label class="hide">hhhhhh</label>  
+               <button class="spin-btn"><i class="fa-solid fa-arrow-right-arrow-left"></i></button></p> 
+            <div class="inp2">
+                <label class="ft-text2" data-translate="to">To</label>
+                <input type="text" placeholder="VANDALUR GATE" class="srch-inp2">
+                <p class="inp-result2"></p>
+            </div>
+            <div class="inp3">
+                <label class="dp-text" data-translate="departure">Departure</label>
+                <input placeholder="Departure" class="srch-inp3" readonly>
+              <button class="dp-btn"><i class="fa-solid fa-angle-left prev"></i><i class="fa-solid fa-angle-right next"></i></button> 
+              <aside class="inp-result3 calendar ">
+
+            
+                       
+                        <span id="monthYear"></span>
+                       
+                    
+                    <aside class="days" id="daysGrid"></aside>
+               
+                </aside>
+
+              </aside>
+            </div>
+            <div class="inp4">
+                <label class="ps-text" data-translate="passengers">Passengers</label>
+                <input  placeholder="1 Person" min="1"  class="srch-inp4" >
+                <button class="person-btn drp-icon"><i class="fas fa-users"></i></button>
+                <aside class="inp-result4 no-of-pass">
+                   
+                    <button class="increase " >+</button>
+                    <input  class="srch-inp5 inp" placeholder="1" type="number" readonly min="1"  max="3" >
+                    <button  class="decrease ">-</button>
+                </aside>
+            </div>
+            <p class="btn-grp">
+                <label  class="hide">hhh</label>
+                <button class="search-button" data-translate="search">Search <i class="fas fa-search"></i></button>
+            </p>
+           
+        </div>
+
+        <div class="manage-user">
+            <button class="track-your-trip" data-translate="track">Track your trip</button>
+            <button class="subscription" data-translate="subs">Subscription</button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+    </section>
+</main>
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+    <script src="places.js"></script>
+</body>
+</html>
