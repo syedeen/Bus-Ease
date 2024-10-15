@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Booking</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(245, 245, 220);
+        }
+        .booking-details {
+            border: 1px solid #333;
+            background-color: rgba(245, 245, 220);
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        .container {
+            width: auto;
+            background-color: rgba(245, 245, 220);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cancel-btn, .go-back {
+            margin: 10px;
+            padding: 10px 15px;
+            background-color: #FF885B;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .cancel-btn:hover, .go-back:hover {
+            background-color: #FF7030; /* Darker shade for hover effect */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Your Booking</h1>
+            <div id="booking-details" class="booking-details"></div>
+            <div class="btn-container">
+                <button class="cancel-btn">Cancel Trip</button>
+                <button class="go-back">Go Back</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Function to format time to AM/PM
+        const formatTimeToAMPM = (time) => {
+            const [hours, minutes] = time.split(':');
+            const suffix = hours >= 12 ? 'PM' : 'AM';
+            const formattedHours = hours % 12 || 12; // Convert to 12-hour format
+            return `${formattedHours}:${minutes} ${suffix}`;
+        };
+
+        const displayBookingDetails = () => {
+            const bookingData = JSON.parse(localStorage.getItem('bookingData'));
+
+            if (!bookingData) {
+                document.getElementById('booking-details').innerHTML = '<p>No booking data found.</p>';
+                return;
+            }
+
+            const { bus, from, to, departureDay, time } = bookingData; // Retrieve from localStorage
+            const formattedTime = formatTimeToAMPM(time); // Format the time here
+
+            const bookingDetailsDiv = document.getElementById('booking-details');
+            bookingDetailsDiv.innerHTML = `
+                <h2>Bus: ${bus}</h2>
+                <p>From: <strong>${from}</strong></p>
+                <p>To: <strong>${to}</strong></p>
+                <p>Departure Day: <strong>${departureDay}</strong></p>
+                <p>Departure Time: <strong>${formattedTime}</strong></p>
+            `;
+        };
+
+        document.querySelector('.cancel-btn').addEventListener('click', () => {
+            const isConfirmed = confirm('Are you sure you want to cancel your trip?');
+            if (isConfirmed) {
+                alert('Your trip has been canceled.');
+                localStorage.removeItem('bookingData'); // Clear the stored data
+                window.location.href = 'index.html'; // Redirect to the main page
+            }
+        });
+
+        document.querySelector(".go-back").addEventListener("click", () => {
+            window.location.href = "index.html";
+        });
+
+        // Call the function to display booking details on page load
+        window.onload = displayBookingDetails;
+    </script>
+</body>
+</html>
