@@ -97,7 +97,188 @@ const busData = [
             "KOYAMBEDU SCHOOL",
             "M.G.R.KOYAMBEDU"
         ]
+    },
+    {
+        bus: "101",
+        places: [
+            "THIRUVOTRIYUR",
+            "THIRUVOTRIYUR TEMPLE",
+            "THANGAL",
+            "ANNA NAGAR",
+            "ROYAPURAM P.S",
+            "CLIVE BATTERY",
+            "PARRYS",
+            "M.G.R.CENTRAL",
+            "DASAPRAKASH",
+            "TAYLORS ROAD",
+            "AMINJIKARAI",
+            "NADUVANKARAI",
+            "ARUMBAKKAM",
+            "NERKUNDRAM",
+            "MADURAVOYAL",
+            "VAANAGARAM",
+            "VELAPPANCHAVADI",
+            "KUMUNANCHAVADI",
+            "POONAMALLEE"
+        ]
+    },
+    {
+        bus: "102",
+        places: [
+            "BROADWAY",
+            "SECRETARIAT",
+            "CHEPAUK",
+            "Q.M.C",
+            "FORESHORE ESTATE",
+            "A.M.S.HOSPITAL",
+            "ADYAR O.T.",
+            "INDIRA NAGAR WATER TANK",
+            "SRP TOOLS",
+            "KANDANCHAVADI",
+            "THORAPPAKKAM TEA SHOP",
+            "MOOTAKARAN CHAVADI",
+            "KARAPAKKAM",
+            "SHOZHANGANALLUR P.U.OFFICE",
+            "KUMARAN NAGAR",
+            "SEMMANCHERI",
+            "NAVALUR",
+            "CHURCH",
+            "PALAVASTHIC CHEMICALS",
+            "HINDUSTAN ENG. COLLEGE",
+            "KELAMBAKKAM"
+        ]
+    },
+    {
+        bus: "102A",
+        places: [
+            "THIRUVANMIYUR",
+            "SRP TOOLS",
+            "KANDANCHAVADI",
+            "THORAPPAKKAM TEA SHOP",
+            "MOOTAKARAN CHAVADI",
+            "KARAPAKKAM",
+            "SHOZHANGANALLUR P.U.OFFICE",
+            "KUMARAN NAGAR",
+            "SEMMANCHERI",
+            "NAVALUR",
+            "SIPCOT",
+            "SIRUSERI I.T.PARK",
+            "PUDUPAKKAM P.U.O.",
+            "PUDUPAKKAM/VANDALOOR RD.J"
+        ]
+    },
+
+    {
+        bus: "18ACT",
+        places: [
+            "GUINDY TVK ESTATE",
+            "ST THOMAS MOUNT PO",
+            "MEENAMABAKKAM OLD AIRPORT",
+            "THIRUSOOLAM NATIONAL AIRPORT",
+            "PALLAVARAM",
+            "CHROMEPET",
+            "T.B.SANATORIUM",
+            "TAMBARAM",
+            "IRUMBULIYUR",
+            "PERUNGALATHUR",
+            "VANDALUR GATE",
+            "VANDALUR ZOO",
+            "KILAMBAKKAM B.S."
+        ]
     }
+    ,
+
+    {
+        bus: "E18",
+        places: [
+            "BROADWAY",
+            "M.G.R.CENTRAL",
+            "P.OR & SONS",
+            "T.V.S",
+            "D.M.S",
+            "S.H.B",
+            "SAIDAPET",
+            "CONCORDE",
+            "GUINDY R.S",
+            "ST THOMAS MOUNT PO",
+            "MEENAMABAKKAM OLD AIRPORT",
+            "THIRUSOOLAM NATIONAL AIRPORT",
+            "PALLAVARAM",
+            "CHROMEPET",
+            "T.B.SANATORIUM",
+            "TAMBARAM",
+            "IRUMBULIYUR",
+            "PERUNGALATHUR",
+            "VANDALUR GATE",
+            "VANDALUR ZOO",
+            "URAPAKKAM",
+            "PALAKKA COMPANY",
+            "GUDUVANCHERY"
+        ]
+    }
+    ,
+    {
+        bus: "D70",
+        places: [
+            "AMBATTUR I.E.",
+            "MOGAIPAIR ROAD JN.",
+            "THIRUMANGALAM",
+            "KOYAMBEDU SCHOOL",
+            "M.M.D.A.COLONY RD.JN.",
+            "JN OF III AND 1ST AVE",
+            "JAFFARKHAN PET",
+            "CIPET",
+            "GUINDY TVK ESTATE",
+            "CONCORDE",
+            "JN.OF RACE COURSE RD",
+            "GURUNANAK COLLEGE",
+            "VELACHERY"
+        ]
+    }
+    ,
+
+    {
+        bus: "70V",
+        places: [
+            "M.G.R.KOYAMBEDU",
+            "M.M.D.A.COLONY RD.JN.",
+            "JN OF III AND 1ST AVE",
+            "JAFFARKHAN PET",
+            "CIPET",
+            "ST THOMAS MOUNT PO",
+            "MEENAMABAKKAM OLD AIRPORT",
+            "THIRUSOOLAM NATIONAL AIRPORT",
+            "PALLAVARAM",
+            "CHROMEPET",
+            "T.B.SANATORIUM",
+            "TAMBARAM",
+            "IRUMBULIYUR",
+            "PERUNGALATHUR",
+            "VANDALUR GATE",
+            "VANDALUR ZOO",
+            "KILAMBAKKAM B.S."
+        ]
+    }
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 // Generate combinations for all buses
@@ -113,7 +294,6 @@ const findBuses = (from, to) => {
     return routes;
 };
 
-// Example function to display the result
 const displayBuses = (from, to) => {
     const routes = findBuses(from, to);
     if (routes.length === 0) {
