@@ -31,6 +31,22 @@ const displayResults = () => {
             `;
             resultsDiv.appendChild(busDiv);
 
+     // Add this function to get today's date's last two digits
+const getLastTwoDigitsOfDate = () => {
+    const today = new Date();
+    return today.getDate().toString().padStart(2, '0'); // Get the day and pad with zero if needed
+};
+
+// Modify the random number generation function
+const generateRandomNumber = () => {
+    const randomPart = Math.floor(1000 + Math.random() * 9000); // Generate a random 4-digit number
+    const lastTwoDigits = getLastTwoDigitsOfDate(); // Get the last two digits of today's date
+    return `${randomPart.toString().slice(0, 2)}${lastTwoDigits}`; // Combine and return the final number
+};
+            
+
+
+
             // Add event listener for the booking button
             const bookButton = busDiv.querySelector('.book-btn');
             bookButton.addEventListener('click', () => {
@@ -41,7 +57,9 @@ const displayResults = () => {
         to: to,
         bus: bus.bus,
         departureDay: DepartureDAY,
-        time: selectedTime
+        time: selectedTime,
+        bookingNumber: generateRandomNumber(), // Generate the custom booking number
+      
     };
                 localStorage.setItem('bookingData', JSON.stringify(bookingData));
                 // Redirect to bookings.html with the parameters
@@ -59,5 +77,4 @@ document.querySelector(".back-btn").addEventListener("click",()=>{
 
 // Call the displayResults function on page load
 window.onload = displayResults;
-
 
