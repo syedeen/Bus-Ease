@@ -43,7 +43,7 @@
             font-size: 16px;
         }
         .cancel-btn:hover, .go-back:hover {
-            background-color: #FF7030; /* Darker shade for hover effect */
+            background-color: #FF7030; 
         }
     </style>
 </head>
@@ -96,7 +96,7 @@
             if (isConfirmed) {
                 alert('Your trip has been canceled.');
                 localStorage.removeItem('bookingData'); // Clear the stored data
-                window.location.href = 'index.html'; // Redirect to the main page
+                window.location.href = 'index.html';
             }
         });
 
@@ -104,7 +104,7 @@
             window.location.href = "index.html";
         });
 
-        // Call the function to display booking details on page load
+       
         window.onload = displayBookingDetails;
     </script>
 </body>
