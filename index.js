@@ -214,7 +214,7 @@ let result=[];
 let inpr=srchinp1.value;
 if(inpr.length){
     result=  places.filter((keyword)=>{
-        return  keyword.toLowerCase().includes(inpr.toLowerCase())
+        return  keyword.toUppererCase().includes(inpr.toLowerCase())
     })
 
 
@@ -233,7 +233,7 @@ let result2=[];
 let inpr2=srchinp2.value;
 if(inpr2.length){
     result2=  places.filter((keyword)=>{
-        return  keyword.toLowerCase().includes(inpr2.toLowerCase())
+        return  keyword.toUppererCase().includes(inpr2.toLowerCase())
     })
 
 
@@ -398,7 +398,7 @@ const places=[
         let inpr=srchinp1.value;
         if(inpr.length){
             result=  places.filter((keyword)=>{
-                return  keyword.toLowerCase().includes(inpr.toLowerCase())
+                return  keyword.toUppererCase().includes(inpr.toLowerCase())
             })
     
     
@@ -417,7 +417,7 @@ const places=[
         let inpr2=srchinp2.value;
         if(inpr2.length){
             result2=  places.filter((keyword)=>{
-                return  keyword.toLowerCase().includes(inpr2.toLowerCase())
+                return  keyword.toUppererCase().includes(inpr2.toLowerCase())
             })
     
     display2(result2);
