@@ -284,7 +284,7 @@ const busData = [
 // Generate combinations for all buses
 const allCombinations = busData.map(({ bus, places }) => createCombinations(places, bus)).flat();
 
-// Function to find possible buses between two locations
+// Function to find buses between two locations
 const findBuses = (from, to) => {
     console.log("Searching for buses from", from, "to", to);
     const routes = allCombinations.filter(route => 
