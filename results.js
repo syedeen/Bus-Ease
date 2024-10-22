@@ -31,13 +31,13 @@ const displayResults = () => {
             `;
             resultsDiv.appendChild(busDiv);
 
-     // Add this function to get today's date's last two digits
+     // function to get today's date's last two digits
 const getLastTwoDigitsOfDate = () => {
     const today = new Date();
     return today.getDate().toString().padStart(2, '0'); // Get the day and pad with zero if needed
 };
 
-// Modify the random number generation function
+//  random number generation function
 const generateRandomNumber = () => {
     const randomPart = Math.floor(1000 + Math.random() * 9000); // Generate a random 4-digit number
     const lastTwoDigits = getLastTwoDigitsOfDate(); // Get the last two digits of today's date
@@ -47,7 +47,7 @@ const generateRandomNumber = () => {
 
 
 
-            // Add event listener for the booking button
+            // event listener for the booking button
             const bookButton = busDiv.querySelector('.book-btn');
             bookButton.addEventListener('click', () => {
                 const selectedTime = document.getElementById(`time-${bus.bus}`).value; // Get the selected time
