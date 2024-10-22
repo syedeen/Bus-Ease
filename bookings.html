@@ -76,19 +76,21 @@
                 return;
             }
 
-            const { bus, from, to, departureDay, time } = bookingData; // Retrieve from localStorage
-            const formattedTime = formatTimeToAMPM(time); // Format the time here
 
-            const bookingDetailsDiv = document.getElementById('booking-details');
-            bookingDetailsDiv.innerHTML = `
-                <h2>Bus: ${bus}</h2>
-                <p>From: <strong>${from}</strong></p>
-                <p>To: <strong>${to}</strong></p>
-                <p>Departure Day: <strong>${departureDay}</strong></p>
-                <p>Departure Time: <strong>${formattedTime}</strong></p>
-            `;
-        };
+            const { bus, from, to, departureDay, time, bookingNumber, bookingDate } = bookingData; // Retrieve from localStorage
+    const formattedTime = formatTimeToAMPM(time); // Format the time here
 
+    const bookingDetailsDiv = document.getElementById('booking-details');
+    bookingDetailsDiv.innerHTML = `
+        <h2>Bus: ${bus}</h2>
+        <p>From: <strong>${from}</strong></p>
+        <p>To: <strong>${to}</strong></p>
+        <p>Departure Day: <strong>${departureDay}</strong></p>
+        <p>Departure Time: <strong>${formattedTime}</strong></p>
+        <p>Booking Number: <strong>${bookingNumber}</strong></p>
+       
+    `;
+};
         document.querySelector('.cancel-btn').addEventListener('click', () => {
             const isConfirmed = confirm('Are you sure you want to cancel your trip?');
             if (isConfirmed) {
