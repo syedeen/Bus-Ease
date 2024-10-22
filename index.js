@@ -209,12 +209,13 @@ const places=[
 
 
 
+
 srchinp1.addEventListener("keyup",()=>{
 let result=[];
 let inpr=srchinp1.value;
 if(inpr.length){
     result=  places.filter((keyword)=>{
-        return  keyword.toUppererCase().includes(inpr.toLowerCase())
+        return  keyword.toUpperCase().includes(inpr.toUpperCase())
     })
 
 
@@ -233,7 +234,7 @@ let result2=[];
 let inpr2=srchinp2.value;
 if(inpr2.length){
     result2=  places.filter((keyword)=>{
-        return  keyword.toUppererCase().includes(inpr2.toLowerCase())
+        return  keyword.toUpperCase().includes(inpr2.toUpperCase())
     })
 
 
@@ -398,7 +399,7 @@ const places=[
         let inpr=srchinp1.value;
         if(inpr.length){
             result=  places.filter((keyword)=>{
-                return  keyword.toUppererCase().includes(inpr.toLowerCase())
+                return  keyword.toUpperCase().includes(inpr.toUpperCase())
             })
     
     
@@ -417,7 +418,7 @@ const places=[
         let inpr2=srchinp2.value;
         if(inpr2.length){
             result2=  places.filter((keyword)=>{
-                return  keyword.toUppererCase().includes(inpr2.toLowerCase())
+                return  keyword.toUpperCase().includes(inpr2.toUpperCase())
             })
     
     display2(result2);
@@ -729,7 +730,6 @@ if(username){
 const parseduser= JSON.parse(username);
 document.querySelector(".welcome-msg").innerHTML=`Hello ${parseduser.username}`;
 }
-
 
 
 
